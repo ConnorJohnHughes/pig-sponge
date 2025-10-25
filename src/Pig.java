@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pig {
 
     /*
@@ -24,10 +27,34 @@ public class Pig {
         assertEqual(5, pigLatin("e"), "e");
     }
 
+    //take in string(s)
+    //check if first letter is a vowel
+    //  if not vowel
+    //      alter so the first letter is now at the end and add on 'ay' the the end
+
+
     // Implement your solution here!
     public static String pigLatin(String sentence) {
+
+        List<String> vowels = new ArrayList<>();
+        vowels.add("a");
+        vowels.add("e");
+        vowels.add("i");
+        vowels.add("o");
+        vowels.add("u");
+
+        for( String vowel: vowels){
+            if (!sentence.startsWith(vowel)){
+                sentence.indexOf(vowel);
+            }
+
+        }
+        
+
         return null;
-    }
+    
+        }
+    
 
 
 

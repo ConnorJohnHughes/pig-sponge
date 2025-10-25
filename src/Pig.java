@@ -43,16 +43,27 @@ public class Pig {
         vowels.add("o");
         vowels.add("u");
 
-        for( String vowel: vowels){
-            if (!sentence.startsWith(vowel)){
-                sentence.indexOf(vowel);
-            }
+    
 
+        List<String> words = new ArrayList<>();
+
+        for( int i = 0; i < sentence.length(); i++){
+            words.add(i, sentence);
+            }
+        for( String word : words){
+            for (String vowel : vowels){
+                if(word.startsWith(vowel)){
+
+                }
+            }
         }
         
+        System.out.println(sentence);
+        
+
 
         return null;
-    
+
         }
     
 

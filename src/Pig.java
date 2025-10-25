@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Pig {
 
@@ -36,35 +35,36 @@ public class Pig {
     // Implement your solution here!
     public static String pigLatin(String sentence) {
 
-        List<String> vowels = new ArrayList<>();
-        vowels.add("a");
-        vowels.add("e");
-        vowels.add("i");
-        vowels.add("o");
-        vowels.add("u");
+        String [] words = sentence.split(" ");
+        String result = "";
 
-    
-
-        List<String> words = new ArrayList<>();
-
-        for( int i = 0; i < sentence.length(); i++){
-            words.add(i, sentence);
-            }
         for( String word : words){
-            for (String vowel : vowels){
-                if(word.startsWith(vowel)){
 
-                }
+                    result += singleWord(word);
+                    result += " ";
+                } 
+            
+        result = result.substring(0, result.length() -1 );
+
+
+        return result;
+
+        }
+
+        public static String singleWord(String word){
+
+            if(word.charAt(0) == 'a' ||word.charAt(0) == 'e' ||word.charAt(0) == 'i' ||word.charAt(0) == 'o' ||word.charAt(0) == 'u'){
+                  return word;
             }
+
+            char fl = word.charAt(0);
+            word = word.substring(1);
+
+            word = word + fl;
+
+            return word + "ay";
         }
-        
-        System.out.println(sentence);
-        
-
-
-        return null;
-
-        }
+    
     
 
 

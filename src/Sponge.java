@@ -44,24 +44,35 @@ public class Sponge {
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
-    String words[];
-    sentence.split(" ", 0);
+    String words[] = sentence.split(" ");
+    String result =  "";
+
 
     for(String word : words){
-
+      result += sponge(word) + " ";
     }
-    return null;
+
+      result = result.substring(0 , result.length() - 1 );
+
+
+    
+    return result;
   }
 
   public static String sponge(String word){
-    word.toLowerCase();
     char[] array = word.toCharArray(); 
-    for(int i = 0; i < array.length; i++){
-      
-    }
+    String newWord = "";
+    boolean letter = true;
+    for (char let : array){ 
+      if(letter){
+        newWord += Character.toLowerCase(let);
+      }else{
+        newWord += Character.toUpperCase(let);
+      }
+    letter = !letter;
+  }
 
-
-    return null;
+    return newWord;
   };
 
 

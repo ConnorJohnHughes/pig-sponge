@@ -31,10 +31,38 @@ public class Sponge {
     assertEqual(6, spongeCase("e"), "e");
   }
 
+  // method 
+  //single string(word)
+  //Takes a string and converts the chars in the string to lower and upper case
+    // starts with lower case and switches to uppercase for the whole string
+
+
+    //Takes string(s) input and converts to an array of strings
+  // loop thru my input to see how many string or strings there
+  // while looping the strings then convert from method into spongecase and then add string array.
+
+
   // Implement your solution here!
   public static String spongeCase(String sentence) {
+    String words[];
+    sentence.split(" ", 0);
+
+    for(String word : words){
+
+    }
     return null;
   }
+
+  public static String sponge(String word){
+    word.toLowerCase();
+    char[] array = word.toCharArray(); 
+    for(int i = 0; i < array.length; i++){
+      
+    }
+
+
+    return null;
+  };
 
 
   // Method to help with testing, you do not need to read this.
